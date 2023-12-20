@@ -1,11 +1,23 @@
 import datetime
+import locale
+
+locale.setlocale(locale.LC_ALL, "")
+message_language = locale.getlocale(locale.LC_CTYPE)[0]
 
 now = datetime.datetime.now()
 
-if (now.hour > 18):
-    print("Bonsoir !")
+if (message_language == "fr_FR"):
+    if (now.hour > 18):
+        print("Bonsoir !")
+    else:
+        print("Bonjour !")
 else:
-    print("Bonjour !")
+    if (now.hour > 18):
+        print("good evening !")
+    else:
+        print("Hello !")
+
+
 
 chaine = input("Rentrez un mot : ")
 
