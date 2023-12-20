@@ -1,6 +1,8 @@
-chaine = "OUI"
+chaine = input("Rentrez un mot : ")
 
-reverseChaine = reversed(chaine)
+reverseChaine = "".join(reversed(chaine))
 
-print(chaine)
-print(reverseChaine)
+if (chaine == reverseChaine):
+    print(reverseChaine + "\nbien dit !")
+else:
+    print(reverseChaine)
